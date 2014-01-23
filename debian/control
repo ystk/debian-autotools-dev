@@ -2,15 +2,16 @@ Source: autotools-dev
 Section: devel
 Priority: optional
 Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
-Build-Depends: debhelper (>> 5)
+Build-Depends: debhelper (>> 7)
 Build-Depends-Indep: perl
-Standards-Version: 3.8.0
+Standards-Version: 3.9.3
 Homepage: http://savannah.gnu.org/projects/config/
 Vcs-Browser: http://git.debian.org/?p=users/hmh/autotools-dev.git
 Vcs-Git: git://git.debian.org/users/hmh/autotools-dev.git
 
 Package: autotools-dev
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Enhances: cdbs, debhelper
 Description: Update infrastructure for config.{guess,sub} files

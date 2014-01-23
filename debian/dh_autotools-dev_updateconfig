@@ -26,7 +26,7 @@ dh_autotools-dev_updateconfig is usually called indirectly in a rules file via t
 dh command.
 
 	%:
-		dh --with autotools_dev $@
+		dh $@ --with autotools_dev
 
 It can also be direcly called at the start of the build (or configure)
 rule.

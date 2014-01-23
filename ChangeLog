@@ -1,3 +1,246 @@
+2012-05-24  Joe Seymour  <jseymour@codesourcery.com>
+
+	* config.sub (hexagon): Set default operating system to elf.
+	* testsuite/config-sub.data: Change "hexagon" mapping to
+	hexagon-unknown-elf.
+
+2012-04-18  Joel Brobecker  <brobecker@adacore.com>
+
+	* config.sub (*-lynx*178, *-lynx*5): New.
+	* testsuite/config-sub.data: Add powerpc-elf-lynxos,
+	powerpc-elf-lynxos5, powerpc-xcoff-lynxos178 testing.
+
+2012-02-14  Marcus Shawcroft  <marcus.shawcroft@arm.com>
+
+	* config.guess  (aarch64:Linux:*:*, aarch64_be:Linux:*:*): New.
+	* config.sub (aarch64-*, aarch64_be-*): New.
+	* testsuite/config-sub.data: Add aarch64-elf, aarch64-linux
+	aarch64-unknown-elf, aarch64-unknown-linux, aarch64_be-elf,
+	aarch64_be-linux, aarch64_be-unknown-elf,
+	aarch64_be-unknown-linux.
+	* testsuite/config-guess.data: Add aarch64, aarch64_be.
+
+2012-02-10  Paul Eggert  <eggert@cs.ucla.edu>
+
+	Fix incorrect FSF snail mail addresses.
+	* config.guess, config.sub: Replace (slightly wrong) snail mail
+	addresses with a URL, as per current GNU coding standards.
+	See <http://sourceware.org/bugzilla/show_bug.cgi?id=13673#c5>.
+
+2012-02-10  Ben Elliston  <bje@gnu.org>
+
+	Reported by thom.fitzpatrick@hp.com.
+	* config.guess (x86_64:VMkernel:*:*): New.
+	* testsuite/config-guess.data: Add test case.
+
+2012-01-28  Bruno Haible  <bruno@clisp.org>
+	    Ben Elliston  <bje@gnu.org>
+
+	* config.guess: Canonicalize CPU-android-linux to CPU-unknown-
+	linux-android.
+	* testsuite/config-sub.data: Add test cases.
+
+2012-01-28  Sean Keys  <skeys@ipdatasys.com>
+	    Ben Elliston  <bje@gnu.org>
+
+	* config.sub: Add xgate (Freescale XGATE processor) and m68hcs12x.
+	* testsuite/config-sub.data: Add a test case.
+
+2012-01-01  Ben Elliston  <bje@gnu.org>
+
+	* config.guess: Update copyright years.
+	* config.sub: Likewise.
+
+2011-12-30  Ben Elliston  <bje@gnu.org>
+
+	* config.sub: Remove some comments (over 10 years old) that are
+	either now resolved or completely irrelevant.
+
+2011-12-30  Paul Eggert  <eggert@cs.ucla.edu>
+
+	* config.guess: Fix a minor misspelling ("tupples").
+
+2011-12-29  Ben Elliston  <bje@gnu.org>
+
+	* config.guess (cris:Linux:*:*): Replace fixed CPU name in the
+	triplet with ${UNAME_MACHINE}, as it is identical.
+	(crisv32:Linux:*:*): Likewise.
+	(frv:Linux:*:*): Likewise.
+	(hexagon:Linux:*:*): Likewise.
+	(or32:Linux:*:*): Likewise.
+	(x86_64:Linux:*:*): Likewise.
+	* testsuite/config-guess.data: Add some missing GNU/Linux tests.
+
+2011-12-29  Ben Elliston  <bje@gnu.org>
+
+	* Makefile (check): Test config.guess before config.sub.
+	* testsuite/config-guess.data: Sort.
+
+2011-11-11  Charles Wilson <cwilso11@users.sourceforge.net>
+
+	* config.guess (i*:MSYS*:*): New.
+	* config.sub: Recognize -msys*.
+	* testsuite/config-guess.data: Add test case.
+
+2011-10-29  DJ Delorie  <dj@redhat.com>
+
+	* config.sub (rl78): New.
+	* testsuite/config-sub.data: Add new tests.
+
+2011-10-08  Joern Rennecke <joern.rennecke@embecosm.com>
+	    Ben Elliston  <bje@gnu.org>
+
+	* config.sub (epiphany): New.
+	* testsuite/config-sub.data: Add new tests.
+
+2011-10-01  Linas Vepstas <linasvepstas@gmail.com>
+	    Ben Elliston  <bje@gnu.org>
+
+	* config.guess (hexagon:Linux:*:*): New.
+	* testsuite/config-guess.data: Add a test case.
+
+2011-09-09  Linas Vepstas  <linasvepstas@gmail.com>
+	    Ben Elliston  <bje@gnu.org>
+
+        * config.sub (hexagon, hexagon-*): New.
+	* testsuite/config-sub.data: Add test cases.
+
+2011-08-23  Roland McGrath  <mcgrathr@google.com>
+
+	* config.sub: Rename 32eb to be32, 32el to le32, 64el to le64, and
+	64eb to be64.
+	* testsuite/config-sub.data: Adjust test cases.
+
+2011-08-20  Ben Elliston  <bje@gnu.org>
+
+	* config.guess (*:FreeBSD:*:*): Switch on ${UNAME_PROCESSOR}.
+	* testsuite/config-guess.data: Remove hard to test FreeBSD cases.
+
+2011-08-16  Roland McGrath  <mcgrathr@google.com>
+
+	* config.sub (32eb, 32el, 64eb, 64el): New (pseudo-)CPUs.
+	(nacl): Grok as alias for 32el-unknown-nacl.
+	* testsuite/config.sub: Add tests for those cases.
+
+2011-08-14  Ben Elliston  <bje@gnu.org>
+
+	* testsuite/config-sub.data: Sort.
+
+2011-06-03  Nick Clifton  <nickc@redhat.com>
+	    Ben Elliston  <bje@gnu.org>
+
+	* config.sub (v850e1, v850es, v850e2, v850e2v3): New.
+	* testsuite/config-sub.data: Add tests for all V850 variants.
+
+2011-05-30  Chris Metcalf  <cmetcalf@tilera.com>
+	    Ben Elliston  <bje@gnu.org>
+
+	* config.guess (tile*:Linux:*:*): Use vendor "unknown", not
+	"tilera", for consistency with other architectures.
+	* config.sub (tile*-*, tilegx-*): Use a more general pattern for
+	"tile" to allow matching tilepro, tilegx32 and other variants.
+	* testsuite/config-guess.data: Update tests.
+	* testsuite/config-sub.data: Likewise.
+
+2011-05-11  Hector Oron  <zumbi@debian.org>
+	    Konstantinos Margaritis  <markos@debian.org>
+
+	* config.guess (arm*:Linux:*:*): Add support for gnueabihf.
+
+2011-03-31  Kirk Hays  <khays@hayshaus.com>
+	    Ben Elliston  <bje@gnu.org>
+
+	* config.sub: Add configuration support for Open8 MCU softcore.
+	* testsuite/config-sub.data: Add some simple test cases.
+
+2011-03-23  Joseph Myers  <joseph@codesourcery.com>
+
+	* config.sub: Map ppcbe to powerpc.
+	* testsuite/config-sub.data: Add test cases.
+
+2011-03-23  Joseph Myers  <joseph@codesourcery.com>
+
+	* config.sub: Map strongarm-*, thumb-* and xscale*-* to
+	corresponding arm targets.
+	* testsuite/config-sub.data: Add test cases.
+
+2011-02-24  Jason Jacques <jtjacques@gmail.com>
+
+	* config.sub (version): Bump copyright years.
+
+2011-02-02  Ben Elliston  <bje@gnu.org>
+	    Paul Eggert  <eggert@cs.ucla.edu>
+
+	* config.guess, config.sub, testsuite/config-sub.data: Eliminate
+	whitespace issues throughout (as found by M-x whitespace-report).
+	Jim Meyering reports that git am complains about spaces before
+	tabs in the Emacs source code.
+
+2011-01-23  Ralf Wildenhues  <Ralf.Wildenhues@gmx.de>
+
+	* config.guess (version): Bump copyright years.
+	(alpha:OSF1:*:*): Reset EXIT trap before exiting to avoid a
+	spurious non-zero exit status on alphaev67-dec-osf5.1.
+
+2011-01-01  Ben Elliston  <bje@gnu.org>
+
+	* config.guess: Update copyright years.
+	* config.sub: Likewise.
+
+2010-12-26  Ben Elliston  <bje@gnu.org>
+
+	Revert due to problems with the Tru64 shell. From Urs Jan?en.
+	2010-04-03 Wolfram Sang <w.sang@pengutronix.de>
+	* config.guess: Use signal names instead of numbers with trap.
+
+2010-12-11  Masaki Muranaka  <monaka@monami-software.com>
+
+	* config.sub: Accept cr16-*-elf.
+	* testsuite/config-sub.data: Add test cases.
+
+2010-09-24  Ben Elliston  <bje@gnu.org>
+
+	From Joachim Schmitz <schmitz@hp.com>:
+	* config.guess (NEO-?:NONSTOP_KERNEL:*:*): New.
+	* testsuite/config-guess.data: Add test cases.
+
+2010-09-11  Ben Elliston  <bje@gnu.org>
+
+	From Joachim Schmitz <schmitz@hp.com>:
+	* config.sub (neo-tandem, nse-tandem): New.
+
+2010-09-07  Ben Elliston  <bje@gnu.org>
+
+	From Macpaul Lin <macpaul@andestech.com>.
+	* config.sub (nds32, nds32le, nds32be): New.
+	* testsuite/config-sub.data: Add test cases.
+
+2010-08-21  Ben Elliston  <bje@gnu.org>
+
+	From Chris Metcalf <cmetcalf@tilera.com>.
+	* config.guess (tile*:Linux:*:*): New.
+	* testsuite/config-guess.data: Add a test case.
+
+2010-07-29  Ben Elliston  <bje@gnu.org>
+
+	Patch from Rainer Tammer <tammer@tammer.net>:
+	* config.guess (*:AIX:*:[4567]): Handle AIX 7.x.
+
+2010-05-20  Maxim Kuvyrkov  <maxim@codesourcery.com>
+
+	* config.sub: Recognize *-linux-android*.
+
+2010-04-03  Wolfram Sang <w.sang@pengutronix.de>
+
+	* config.guess: Use signal names instead of numbers with trap.
+
+2010-03-23  Joseph Myers  <joseph@codesourcery.com>
+
+	* config.sub: Always map c54x-*, c55x-* and c6x-* to corresponding
+	tic54x, tic55x and tic6x names.  Only use -coff as a default OS if
+	no OS specified.
+	* testsuite/config-sub.data: Add test cases.
+
 2010-01-22  Chris Metcalf  <cmetcalf@tilera.com>
 	    Ben Elliston  <bje@gnu.org>
 
@@ -193,7 +436,7 @@
 	* config.guess (i86pc:SunOS:5.*:*, i86xen:SunOS:5.*:*): The full
 	path to /usr/bin/echo is necessary to work around the shell
 	builtins for echo that do not handle newlines.  From Ali Bahrami.
-	
+
 2008-12-11  Joel Sherrill <joel.sherrill@oarcorp.com>
 
 	* config.sub (lm32): New.
@@ -504,8 +747,8 @@
 
 2006-03-07  Mike Frysinger  <vapier@gentoo.org>
 
-        * config.sub (sheb, sheb-*): Handle these in addition to shbe.
-        * testsuite/config-sub.data: Add test case.
+	* config.sub (sheb, sheb-*): Handle these in addition to shbe.
+	* testsuite/config-sub.data: Add test case.
 
 2006-03-06  Ben Elliston  <bje@gnu.org>
 
@@ -736,14 +979,14 @@
 	From: Paul Eggert <eggert@CS.UCLA.EDU>
 	To: config-patches@gnu.org
 	Subject: config.guess, config.sub misdiagnose write errors
-	
+
 	config.guess and config.sub sometimes mishandle write errors to
 	stdout: they either ignore the errors, or output invalid
 	diagnostics when they occur.  For a simple (albeit unrealistic)
 	example, on my Solaris 8 (sparc) host, the command "config.guess
 	>&-" exits with status 0; it should exit with status 1, due to the
 	write failure.
-	
+
 	* config.guess: Don't exit with an explicit exit code of 0.
 	* config.sub: Likewise.
 
@@ -857,7 +1100,7 @@
 
 	* config.sub (djgpp): Alias to i586-pc-msdosdjgpp.
 	* testsuite/config-sub.data: Add a test case.
-	
+
 2004-10-25  Ben Elliston  <bje@gnu.org>
 
 	* testsuite/config-guess.sh: Reduce recurring tabs into a single
@@ -1188,7 +1431,7 @@
 
 	Revert the following due to the demise of MicroBSD:
 
-        2003-01-03  Scott Kamp  <dingo@microbsd.net>
+	2003-01-03  Scott Kamp  <dingo@microbsd.net>
 	* config.guess: Detect MicroBSD operating system on i386 CPUs.
 	* config.sub: Handle aliases for such.
 
@@ -1627,7 +1870,7 @@
 
 2001-11-07  D.J. Barrow  <djbarrow@de.ibm.com>
 
-        * config.sub: Added S/390 31 and 64 bit target.
+	* config.sub: Added S/390 31 and 64 bit target.
 
 2001-11-06  John Marshall  <jmarshall@acm.org>
 
@@ -1737,7 +1980,7 @@
 
 2001-07-27  Niibe Yutaka  <gniibe@m17n.org>
 
-        * config.sub: Recognize sh3eb and sh4eb (big endian) aliases.
+	* config.sub: Recognize sh3eb and sh4eb (big endian) aliases.
 
 2001-07-19  Ben Elliston  <bje@redhat.com>
 

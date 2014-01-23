@@ -1,3 +1,67 @@
+autotools-dev (20120608.1) unstable; urgency=medium
+
+  [ Henrique de Moraes Holschuh ]
+  * Sync to upstream git 2012-06-12
+    [commit 97cde7c78583af2e0694fb1ab518a8294664bda8]
+    + hexagon support
+  * debian/control: bump standars version to 3.9.3 (no changes required)
+  * Medium urgency upload due to multiarch release goal
+
+  [ Steve Langasek ]
+  * Mark autotools-dev Multi-Arch: foreign (closes: #666450)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 08 Jun 2012 12:48:45 -0300
+
+autotools-dev (20120210.1) unstable; urgency=high
+
+  * Sync to upstream git 2012-02-13
+    [commit d6f39afaf50f884f62a6f6c04d5057884a098a4f]
+    + ARM 64bit ABI support (aarch64)
+  * Set urgency to high by request of Jonathan Austin (ARM), to start
+    the GNU config bootstrap of the new arch in Debian and Ubuntu ASAP
+  * Update README.Debian:
+    + Rework time-stamp skew build problems section.  Note that dpkg enforces
+      limited sanity on package unpack, but that does not cover all
+      possibilities of inducing time-stamp skew breakage (closes: #589083)
+    + Some minor rewording and fixes.  This document really could use a 
+      rewrite...
+    + Mention to dh-autoreconf and the autotools-dev dh helpers in the main
+      text.  Mention that CDBS takes care of certain details automatically,
+      and to not use dh-autoreconf and dh-autotools-dev* at the same time.
+      Mention the brilliant dpkg-source "extend-diff-ignore" option to keep
+      the diffs clean (closes: #615894)
+  * Remove extremely outdated examples.  Patches with new ones are welcome!
+  * debian/rules:
+    + remove ancient cruft and update copyright
+    + add build-arch and build-indep targets
+  * debian/control: bump standards-version to 3.9.2 (no changes)
+  * debian/copyright: move from autotools-dev.copyright, and update for 2012
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 13 Feb 2012 21:25:55 -0200
+
+autotools-dev (20110511.1) unstable; urgency=low
+
+  * Sync to upstream git 2011-05-11
+    [commit 0783756885327f171aab844db8ad331b8586ed62]
+    + Add support for armhf (closes: #626101)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Wed, 11 May 2011 04:41:20 -0300
+
+autotools-dev (20110508.1) unstable; urgency=low
+
+  * Sync to upstreqam git 2011-05-08
+    [commit 626f5d2f5ee2e5effe8a4671cc9b223c2dc1148d]
+  * Update examples for dh_autotools-dev_restoreconfig and
+    dh_autotools-dev_updateconfig, to dh $@ --with foo (closes: #602773)
+  * Bump standards-version to 3.9.1 (no changes)
+  * Remove editor junk from the end of the Debian changelog
+  * Update to debhelper mode v7
+  * Update example "ask upstream to update GNU config" mail template:
+    + Wrap at 74 characters
+    + Upstream GNU config now uses git...
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sun, 08 May 2011 19:44:58 -0300
+
 autotools-dev (20100122.1) unstable; urgency=low
 
   [ Fabian Greffrath ]
@@ -626,7 +690,3 @@ autotools-dev (20010511.1) unstable; urgency=low
     will take care of automake.
 
  -- Henrique de Moraes Holschuh <hmh@debian.org>  Mon, 23 Apr 2001 16:35:06 -0300
-
-Local variables:
-mode: debian-changelog
-End:

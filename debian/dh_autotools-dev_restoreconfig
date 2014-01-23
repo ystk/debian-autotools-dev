@@ -25,7 +25,7 @@ dh_autotools-dev_restoreconfig is usually called indirectly in a rules file via 
 dh command.
 
 	%:
-		dh --with autotools_dev $@
+		dh $@ --with autotools_dev
 
 It can also be direcly called in the clean rule.
 
