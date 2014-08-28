@@ -40,8 +40,8 @@ rule.
 
 init();
 
-complex_doit('for c_g in `find -type f -name config.guess` ; do if ! test -e $c_g.dh-orig ; then mv -f $c_g $c_g.dh-orig ; cp -f /usr/share/misc/config.guess $c_g ; fi ; done');
-complex_doit('for c_s in `find -type f -name config.sub`   ; do if ! test -e $c_s.dh-orig ; then mv -f $c_s $c_s.dh-orig ; cp -f /usr/share/misc/config.sub   $c_s ; fi ; done');
+complex_doit('for c_g in `find -type f -name config.guess` ; do if ! test -e "$c_g.dh-orig" ; then mv -f "$c_g" "$c_g.dh-orig" ; cp -f /usr/share/misc/config.guess "$c_g" ; fi ; done');
+complex_doit('for c_s in `find -type f -name config.sub`   ; do if ! test -e "$c_s.dh-orig" ; then mv -f "$c_s" "$c_s.dh-orig" ; cp -f /usr/share/misc/config.sub   "$c_s" ; fi ; done');
 
 =head1 SEE ALSO
 

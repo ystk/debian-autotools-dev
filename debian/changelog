@@ -1,3 +1,38 @@
+autotools-dev (20140510.1) unstable; urgency=low
+
+  * Sync to upstream git 2014-05-10
+    [commit 5049811e672698aa2337bb27ede94e54c9174154]
+    + Updates for some embedded Linux platforms such as openrisc/or1k
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 10 May 2014 18:02:55 -0300
+
+autotools-dev (20130810.1) unstable; urgency=low
+
+  * Sync to upstream git 2013-08-10 (closes: #719272)
+    [commit 6ce9fc8a12ad86d2ab6a56694998905b5b75e490]
+    + Add support for ppc64le, ppcle
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Sat, 10 Aug 2013 09:23:55 -0300
+
+autotools-dev (20130515.1) unstable; urgency=low
+
+  [ Henrique de Moraes Holschuh ]
+  * Sync to upstream git 2013-05-15 (closes: #709748)
+    [commit 20f0b7ebd0a4b44c00f6ecff0115539768f26f48]
+    + Switch license to GPLv3 with exception
+    + Detect and use -uclibc suffix for uClibc targets on i*86 and x86_64
+    + handle armv6/v7/v8 targets
+    + new targets: linux-musl*, microblazeel, or1k:Linux, arc:Linux, arceb:Linux
+    + s390:Linux:*, switch to -gnu and -uclibc suffixes
+  * dh_autotools-dev: better shell escaping and clean behaviour
+  * debian/copyright: update to GPLv3 with exception
+  * NEWS.Debian: note the license change and autoconf-restricted exception
+
+  [ Raúl Benencia ]
+  * README.Debian: fix typo (closes: #699391)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Thu, 30 May 2013 20:28:51 -0300
+
 autotools-dev (20120608.1) unstable; urgency=medium
 
   [ Henrique de Moraes Holschuh ]

@@ -337,13 +337,13 @@ requires a build-dependency on autotools-dev, of course.
 Using the debhelper helpers:
 
 If you use the "dh" command provided by debhelper mode v7 and newer,
-please check the dh_autotools_dev_updateconfig manpage on how to enable
+please check the dh_autotools-dev_updateconfig manpage on how to enable
 the "autotools_dev" dh module.  It will update config.sub and config.guess
 for the build.
 
 You should also check the dh-autoreconf documentation to automate
 retooling on build time, which is preferred over just updating config.sub
-and config.guess.  Do NOT use dh-autoreconf and dh_autotools_dev_* helpers
+and config.guess.  Do NOT use dh-autoreconf and dh_autotools-dev_* helpers
 at the same time, dh-autoreconf takes care of updating config.sub and
 config.guess by itself.
 

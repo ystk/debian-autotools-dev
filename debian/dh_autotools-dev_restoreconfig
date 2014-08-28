@@ -40,8 +40,9 @@ It can also be direcly called in the clean rule.
 
 init();
 
-complex_doit('for c_g in `find -type f -name config.guess` ; do if test -e $c_g.dh-orig ; then mv -f $c_g.dh-orig $c_g ; fi ; done');
-complex_doit('for c_s in `find -type f -name config.sub`   ; do if test -e $c_s.dh-orig ; then mv -f $c_s.dh-orig $c_s ; fi ; done');
+complex_doit('for c_g in `find . -type f -name config.guess` ; do if test -e "$c_g.dh-orig" ; then mv -f "$c_g.dh-orig" "$c_g" ; fi ; done');
+complex_doit('for c_s in `find . -type f -name config.sub`   ; do if test -e "$c_s.dh-orig" ; then mv -f "$c_s.dh-orig" "$c_s" ; fi ; done');
+complex_doit('find . -type f \( -name config.guess.dh-orig -o -name config.sub.dh-orig \) -delete');
 
 =head1 SEE ALSO
 
