@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Henrique de Moraes Holschuh <hmh@debian.org>
 Build-Depends: debhelper (>> 7)
 Build-Depends-Indep: perl
-Standards-Version: 3.9.3
+Standards-Version: 3.9.5
 Homepage: http://savannah.gnu.org/projects/config/
 Vcs-Browser: http://git.debian.org/?p=users/hmh/autotools-dev.git
 Vcs-Git: git://git.debian.org/users/hmh/autotools-dev.git

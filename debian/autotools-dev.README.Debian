@@ -108,8 +108,8 @@ and autoconf and contains generated files.
    This method is extremely prone to cause time-stamp skew issues, and it
    is a continuous source of build breakage.
 
-3. Live with whatever crap upstream used, but update config.sub and
-   config.guess to (hopefully) not break new arches.
+3. Live with whatever unknown release upstream used, but update
+   config.sub and config.guess to (hopefully) not break new arches.
 
    This is always a very bad choice.  It can easily break anyway, and
    cause very annoying issues if anyone ever needs to update the
@@ -436,14 +436,13 @@ will help you catch any problems early, before they creep in a stable
 release only to blow up on a security update.
 
 Build time will be a little longer, but that's an acceptable compromise.
-We do not want whatever possibly broken crap upstream has for gettext,
-autoconf and friends screwing up Debian builds, automated or otherwise.
-The gettext, libtool and autoconf Debian maintainers take great pain to
-make sure their packages are up-to-date, bug-free and work sanely on all
-Debian-supported architectures.  All that work goes down the drain if you
-leave some old config.sub or libtool.sh from an unknown variant of some
-weird distribution of 3 years ago just because your upstream happens to
-like it.
+We do not want whatever upstream has for gettext, autoconf and friends
+causing issues for Debian builds, automated or otherwise.  The gettext,
+libtool and autoconf Debian maintainers take great pain to make sure their
+packages are up-to-date, bug-free and work sanely on all Debian-supported
+architectures.  All that work goes down the drain if you leave some old
+config.sub or libtool.sh from an unknown variant of some weird
+distribution of 3 years ago just because your upstream happens to like it.
 
 The usual way to automatically regenerate the build system is to create an
 autogen.sh script, that one runs from debian/rules as a pre-requisite to

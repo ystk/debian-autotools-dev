@@ -1,3 +1,13 @@
+autotools-dev (20140911.1) unstable; urgency=medium
+
+  * Sync to upstream git 2014-09-11
+    [commit 576c839acca0e082e536fd27568b90a446ce5b96]
+    + Add support for the RISC-V ISA (riscv32, riscv64)
+  * Reword README.Debian to not use bad words (closes: #761291)
+  * debian/control: bump standards-version to 3.9.5 (no changes)
+
+ -- Henrique de Moraes Holschuh <hmh@debian.org>  Fri, 12 Sep 2014 16:07:31 -0300
+
 autotools-dev (20140510.1) unstable; urgency=low
 
   * Sync to upstream git 2014-05-10
